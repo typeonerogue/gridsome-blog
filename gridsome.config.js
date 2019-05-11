@@ -1,4 +1,4 @@
-// This is where project configuration and plugin options are located. 
+// This is where project configuration and plugin options are located.
 // Learn more: https://gridsome.org/docs/config
 
 // Changes here require a server restart.
@@ -13,10 +13,10 @@ module.exports = {
       anchorClassName: 'icon icon-link',
       plugins: [
         {
-          use: `gridsome-plugin-netlify-cms`
-        }
-      ]
-    }
+          use: `gridsome-plugin-netlify-cms`,
+        },
+      ],
+    },
   },
   plugins: [
     {
@@ -27,15 +27,15 @@ module.exports = {
         remark: {
           plugins: [
             // ...local plugins
-          ]
-        }
-      }
+          ],
+        },
+      },
     },
     {
       use: `gridsome-plugin-netlify-cms`,
       options: {
-        publicPath: `/admin`
-      }
+        publicPath: `/admin`,
+      },
     },
-  ]
-}
+  ],
+};
