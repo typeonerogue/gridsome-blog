@@ -11,15 +11,16 @@ module.exports = {
       externalLinksTarget: '_blank',
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
       anchorClassName: 'icon icon-link',
-      plugins: [
-        {
+      plugins: [{
           use: `gridsome-plugin-netlify-cms`,
+        },
+        {
+          use: `gridsome-plugin-typescript`,
         },
       ],
     },
   },
-  plugins: [
-    {
+  plugins: [{
       use: '@gridsome/source-filesystem',
       options: {
         path: 'posts/**/*.md',
