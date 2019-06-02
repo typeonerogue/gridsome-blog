@@ -5,8 +5,11 @@
         <g-link to="/">{{ $static.metaData.siteName }}</g-link>
       </strong>
       <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about">About</g-link>
+        <g-link
+          v-for="edge in $static.allRoguePage.edges"
+          v-bind:key="edge.node.pageName"
+          :to="edge.node.route"
+        >{{edge.node.title}}</g-link>
       </nav>
     </header>
     <slot/>
@@ -17,6 +20,15 @@
 query {
   metaData {
     siteName
+  }
+  allRoguePage {
+    edges {
+      node {
+        title
+        pageName
+        route
+      }
+    }
   }
 }
 </static-query>
