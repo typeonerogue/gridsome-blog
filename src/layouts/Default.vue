@@ -6,6 +6,7 @@
       </strong>
       <nav class="nav">
         <g-link
+          class="nav__link"
           v-for="edge in $static.allRoguePage.edges"
           v-bind:key="edge.node.pageName"
           :to="edge.node.route"
