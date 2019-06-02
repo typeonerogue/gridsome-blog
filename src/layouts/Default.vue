@@ -7,10 +7,10 @@
       <nav class="nav">
         <g-link
           class="nav__link"
-          v-for="edge in $static.allRoguePage.edges"
-          v-bind:key="edge.node.pageName"
-          :to="edge.node.route"
-        >{{edge.node.title}}</g-link>
+          v-for="page in pages"
+          v-bind:key="page.pageName"
+          :to="page.route"
+        >{{page.title}}</g-link>
       </nav>
     </header>
     <slot/>
@@ -28,11 +28,41 @@ query {
         title
         pageName
         route
+        menuOrder
       }
     }
   }
 }
 </static-query>
+
+<script>
+export default {
+  computed: {
+    edges() {
+      return;
+      this.$static &&
+      this.$static.allRoguePage &&
+      this.$static.allRoguePage.edges
+        ? this.$static.allRoguePage.edges
+        : null;
+    },
+    pages() {
+      return this.edges
+        ? this.edges
+            .map(edge => ({
+              title: edge.node.title,
+              pageName: edge.node.pageName,
+              route: edge.node.route,
+              menuOrder: edge.node.menuOrder
+            }))
+            .sort((node1, node2) => {
+              return node1.menuOrder < node2.menuOrder ? -1 : 1;
+            })
+        : [];
+    }
+  }
+};
+</script>
 
 <style>
 body {
