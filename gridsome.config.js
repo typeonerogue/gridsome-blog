@@ -8,16 +8,9 @@ module.exports = {
   siteName: `Rogue's Blog`,
   transformers: {
     remark: {
-      externalLinksTarget: '_blank',
-      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
-      anchorClassName: 'icon icon-link',
       plugins: [{
-          use: `gridsome-plugin-netlify-cms`,
-        },
-        {
-          use: `gridsome-plugin-typescript`,
-        },
-      ],
+        use: `gridsome-plugin-netlify-cms`,
+      }],
     },
   },
   plugins: [{
@@ -25,27 +18,19 @@ module.exports = {
     options: {
       path: 'posts/**/*.md',
       typeName: 'Post',
-      remark: {
-        plugins: [
-          // ...local plugins
-        ],
-      },
+      remark: {},
     },
   }, {
     use: '@gridsome/source-filesystem',
     options: {
       path: 'pages/**/*.md',
       typeName: 'RoguePage',
-      remark: {
-        plugins: [
-          // ...local plugins
-        ]
-      }
-    }
+      remark: {},
+    },
   }, {
     use: `gridsome-plugin-netlify-cms`,
     options: {
       publicPath: `/admin`,
     },
-  }, ],
+  }],
 };
