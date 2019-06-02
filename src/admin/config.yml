@@ -16,3 +16,11 @@ collections:
       - { label: 'Excerpt', name: 'excerpt', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'date' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'pages'
+    label: 'pages'
+    folder: 'pages'
+    create: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'date' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
