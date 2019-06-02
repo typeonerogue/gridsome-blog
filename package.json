@@ -7,16 +7,20 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
-    "@gridsome/source-filesystem": "^0.4.1",
-    "@gridsome/transformer-remark": "^0.3.0",
-    "gridsome": "^0.6.0",
-    "gridsome-plugin-netlify-cms": "^1.0.6",
-    "netlify-cms": "^2.9.1"
+    "@gridsome/source-filesystem": "^0.5.0",
+    "@gridsome/transformer-remark": "^0.3.2",
+    "gridsome": "^0.6.2",
+    "netlify-cms": "^2.9.1",
+    "vue": "^2.6.10"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-vue": "^5.2.2",
-    "jshint": "^2.10.2"
+    "gridsome-plugin-netlify-cms": "^1.0.6",
+    "jshint": "^2.10.2",
+    "prettier": "^1.17.1",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5"
   }
 }

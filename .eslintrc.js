@@ -1,13 +1,26 @@
 module.exports = {
-  plugins: ['prettier'],
-  extends: [
-    // add more generic rulesets here, such as:
-    // 'eslint:recommended',
-    'plugin:vue/recommended',
-  ],
-  rules: {
-    // override/add rules settings here, such as:
-    // 'vue/no-unused-vars': 'error'
-    'prettier/prettier': 'error',
-  },
+    root: true,
+    parser: "babel-eslint",
+    parserOptions: {
+        sourceType: "module"
+    },
+    env: {
+        browser: true
+    },
+    extends: [
+        "prettier",
+        "prettier/standard",
+        "plugin:vue/recommended"
+    ],
+    plugins: [
+        "vue",
+        "prettier"
+    ],
+    rules: {
+        indent: 0,
+        "no-tabs": 0,
+        "eol-last": "off",
+        "generator-star-spacing": 0,
+        "no-debugger": process.env.NODE_ENV === "production" ? 2 : 0
+    }
 };
