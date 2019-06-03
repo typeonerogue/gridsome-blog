@@ -5,27 +5,38 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-module.exports = function (api) {
+module.exports = function(api) {
   api.loadSource(store => {
     // Use the Data store API here: https://gridsome.org/docs/data-store-api
   });
-  api.createPages(async ({
-    createPages,
-    graphql
-  }) => {
-    // const result = await graphql(`
-    // query {
-    //   allRoguePage {
-    //     edges {
-    //       node {
-    //         title
-    //         pageName
-    //         route
-    //         menuOrder
-    //       }
-    //     }
-    //   }
-    // }`);
+  api.createPages(async ({ createPage, graphql }) => {
+    const { data } = await graphql(`
+      {
+        allRoguePage {
+          edges {
+            node {
+              title
+              pageName
+              route
+              menuOrder
+              content
+            }
+          }
+        }
+      }
+    `);
 
+    console.log(data);
+
+    data.allRoguePage.edges.forEach(({ node }) => {
+      createPage({
+        path: `${node.route}`,
+        component: `./src/templates/Page.vue`,
+        context: {
+          title: node.title,
+          content: node.content
+        }
+      });
+    });
   });
 };
