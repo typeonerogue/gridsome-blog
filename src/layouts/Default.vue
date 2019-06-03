@@ -14,6 +14,7 @@
       </nav>
     </header>
     <slot/>
+    <footer-comp/>
   </div>
 </template>
 
@@ -36,13 +37,17 @@ query {
 </static-query>
 
 <script>
+import FooterComp from '~/components/Footer.vue';
+
 export default {
+  components: {
+    FooterComp
+  },
   computed: {
     edges() {
-      return;
-      this.$static &&
-      this.$static.allRoguePage &&
-      this.$static.allRoguePage.edges
+      return this.$static &&
+        this.$static.allRoguePage &&
+        this.$static.allRoguePage.edges
         ? this.$static.allRoguePage.edges
         : null;
     },
@@ -55,6 +60,9 @@ export default {
               route: edge.node.route,
               menuOrder: edge.node.menuOrder
             }))
+            .filter(page => {
+              return page.menuOrder > 0;
+            })
             .sort((node1, node2) => {
               return node1.menuOrder < node2.menuOrder ? -1 : 1;
             })
