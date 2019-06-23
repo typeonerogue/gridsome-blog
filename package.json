@@ -9,20 +9,20 @@
   "dependencies": {
     "@gridsome/source-filesystem": "^0.5.0",
     "@gridsome/transformer-remark": "^0.3.2",
-    "gridsome": "^0.6.3",
-    "netlify-cms": "^2.9.1",
+    "gridsome": "^0.6.4",
+    "netlify-cms": "^2.9.3",
     "vue": "^2.6.10"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-config-prettier": "^4.3.0",
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.0.0",
+    "eslint-config-prettier": "^5.0.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-vue": "^5.2.2",
     "gridsome-plugin-netlify-cms": "^1.0.7",
     "jshint": "^2.10.2",
-    "prettier": "^1.17.1",
-    "tslint": "^5.17.0",
-    "typescript": "^3.4.5"
+    "prettier": "^1.18.2",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.2"
   }
 }
