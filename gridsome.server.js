@@ -12,11 +12,7 @@ module.exports = function(api) {
   api.createPages(async ({ createPage, graphql }) => {
     const { data } = await graphql(`
       {
-        allRoguePage(
-          sortBy: "menuOrder"
-          order: ASC
-          filter: { menuOrder: { gt: -1 } }
-        ) {
+        allRoguePage(sortBy: "menuOrder", order: ASC) {
           edges {
             node {
               title
