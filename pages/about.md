@@ -6,6 +6,5 @@ route: /about
 includeInMenu: true
 menuOrder: 2
 ---
-**About**
 
 This page will contain stuff about this page.

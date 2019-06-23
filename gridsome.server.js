@@ -26,8 +26,6 @@ module.exports = function(api) {
       }
     `);
 
-    console.log(data);
-
     data.allRoguePage.edges.forEach(({ node }) => {
       createPage({
         path: `${node.route}`,
