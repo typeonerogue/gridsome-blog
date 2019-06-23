@@ -23,7 +23,7 @@ query {
   metaData {
     siteName
   }
-  allRoguePage(sortBy: "menuOrder", order: ASC) {
+  allRoguePage(sortBy: "menuOrder", order: ASC, filter: { menuOrder: { gt: -1 } }) {
     edges {
       node {
         title
