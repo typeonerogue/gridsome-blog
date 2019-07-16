@@ -11,6 +11,7 @@
           v-bind:key="page.node.pageName"
           :to="page.node.route"
         >{{page.node.title}}</g-link>
+        <a class="nav__link" v-if="isDev" href="/admin">Admin</a>
       </nav>
     </header>
     <slot/>
@@ -46,6 +47,11 @@ import FooterComp from '~/components/Footer.vue';
 export default {
   components: {
     FooterComp
+  },
+  computed: {
+    isDev() {
+      return process.env.NODE_ENV === 'development';
+    }
   }
 };
 </script>
