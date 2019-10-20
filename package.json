@@ -10,6 +10,7 @@
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.3.4",
     "gridsome": "^0.7.8",
+    "lodash": "^4.17.15",
     "netlify-cms": "^2.9.7",
     "vue": "^2.6.10"
   },
