@@ -7,30 +7,30 @@
 module.exports = {
   siteName: `Rogue's Blog`,
   transformers: {
-    remark: {
-      plugins: [{
-        use: `gridsome-plugin-netlify-cms`,
-      }],
-    },
+    remark: {}
   },
-  plugins: [{
-    use: '@gridsome/source-filesystem',
-    options: {
-      path: 'posts/**/*.md',
-      typeName: 'Post',
-      remark: {},
+  plugins: [
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'posts/**/*.md',
+        typeName: 'Post',
+        remark: {}
+      }
     },
-  }, {
-    use: '@gridsome/source-filesystem',
-    options: {
-      path: 'pages/**/*.md',
-      typeName: 'RoguePage',
-      remark: {},
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'pages/**/*.md',
+        typeName: 'RoguePage',
+        remark: {}
+      }
     },
-  }, {
-    use: `gridsome-plugin-netlify-cms`,
-    options: {
-      publicPath: `/admin`,
-    },
-  }],
+    {
+      use: `gridsome-plugin-netlify-cms`,
+      options: {
+        publicPath: `/admin`
+      }
+    }
+  ]
 };
