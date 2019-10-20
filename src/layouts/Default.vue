@@ -2,7 +2,7 @@
   <div class="layout">
     <header class="header">
       <strong>
-        <g-link to="/">{{ $static.metaData.siteName }}</g-link>
+        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
       </strong>
       <nav class="nav">
         <g-link
@@ -14,14 +14,14 @@
         <a class="nav__link" v-if="isDev" href="/admin">Admin</a>
       </nav>
     </header>
-    <slot/>
-    <footer-comp/>
+    <slot />
+    <footer-comp />
   </div>
 </template>
 
 <static-query>
 query {
-  metaData {
+  metadata {
     siteName
   }
   allRoguePage(
