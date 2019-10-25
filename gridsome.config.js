@@ -5,7 +5,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: `Rogue's Blog`,
+  siteName: `Bryan's Tech Blog`,
   transformers: {
     remark: {}
   },

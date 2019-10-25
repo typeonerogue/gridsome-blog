@@ -11,6 +11,7 @@
           v-bind:key="page.node.pageName"
           :to="page.node.route"
         >{{page.node.title}}</g-link>
+        <a class="nav__link" href="/blog">Blog</a>
         <a class="nav__link" v-if="isDev" href="/admin">Admin</a>
       </nav>
     </header>
