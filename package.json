@@ -28,7 +28,6 @@
     "eslint-plugin-vue": "^6.2.2",
     "gridsome-plugin-netlify-cms": "^1.0.9",
     "jshint": "^2.11.1",
-    "tslint": "^6.1.2",
     "typescript": "^3.9.7"
   }
 }
