@@ -15,11 +15,11 @@ So, back on topic. How do we start our very own code repository? As usual, there
 
 1. Create an account on [Github](https://github.com/join?source=header-home) if you haven't already.
 2. You have [Git](https://git-scm.com/downloads) installed, right?
-3. Next, [create a new repository](https://github.com/new). 
+3. Next, [create a new repository](https://github.com/new).
 4. Open up your terminal. I know typing... But this is when it gets interesting.
-5. There's going to be a button on your created Github repo in green labelled __Clone or download__. Click on that button and copy the link provided. The link provided will look like this https://github.com/[yourusername]/[yourreponame].git
+5. There's going to be a button on your created Github repo in green labelled __Clone or download__. Click on that button and copy the link provided. The link provided will look like this <https://github.com/[yourusername]/[yourreponame].git>
 
-```
+```bash
         git clone [https://github.com/[yourusername]/[yourreponame].git
         cd [yourreponame]
 ```
@@ -29,6 +29,7 @@ Excellent! You've now gotten (gitten?) your first repo!
 You can now at this point start buiding your own _thing_! If you're just looking to get up and running with something quick, use this:
 
 Create a file in the directory you cloned above called _index.html_ with the following content _for example_
+
 ```html
 <xmp>
 <html>
@@ -43,9 +44,10 @@ Create a file in the directory you cloned above called _index.html_ with the fol
 </html>
 </xmp>
 ```
+
 Save this file, and at this point, we're almost there!
 
-```
+```bash
     git add --all
     git commit -m "Initial commit"
     git push -u origin master
