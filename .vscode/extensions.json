@@ -9,7 +9,6 @@
     "dbaeumer.vscode-eslint",
     "eg2.vscode-npm-script",
     "octref.vetur",
-    "ms-vscode.vscode-typescript-tslint-plugin",
     "prograhammer.tslint-vue"
   ],
   // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
