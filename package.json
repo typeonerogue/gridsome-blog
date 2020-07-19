@@ -2,28 +2,33 @@
   "name": "gridsome-blog",
   "private": true,
   "scripts": {
+    "start": "node server.js",
     "build": "gridsome build",
     "develop": "gridsome develop",
     "explore": "gridsome explore"
   },
+  "engines": {
+    "node": "12.18.2",
+    "npm": "6.14.5"
+  },
   "dependencies": {
     "@gridsome/source-filesystem": "^0.6.2",
-    "@gridsome/transformer-remark": "^0.3.4",
-    "gridsome": "^0.7.8",
-    "lodash": "^4.17.15",
-    "netlify-cms": "^2.9.7",
-    "vue": "^2.6.10"
+    "@gridsome/transformer-remark": "^0.6.1",
+    "express": "^4.17.1",
+    "gridsome": "^0.7.19",
+    "lodash": "^4.17.19",
+    "netlify-cms": "^2.10.54",
+    "vue": "^2.6.11"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.5.1",
-    "eslint-config-prettier": "^6.4.0",
-    "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-vue": "^5.2.3",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-vue": "^6.2.2",
     "gridsome-plugin-netlify-cms": "^1.0.9",
-    "jshint": "^2.10.2",
-    "prettier": "^1.18.2",
-    "tslint": "^5.20.0",
-    "typescript": "^3.6.4"
+    "jshint": "^2.11.1",
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.7"
   }
 }

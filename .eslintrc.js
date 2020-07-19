@@ -15,6 +15,15 @@ module.exports = {
     'no-tabs': 0,
     'eol-last': 'off',
     'generator-star-spacing': 0,
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    "vue/html-closing-bracket-newline": ["error", {
+      "singleline": "never",
+      "multiline": "never"
+    }],
+    "vue/html-self-closing": ["error", {
+      "html": {normal: "never", void: "always", component: "never"},
+      "svg": "always",
+      "math": "always"
+    }]
   }
 };

@@ -10,6 +10,11 @@ module.exports = function(api) {
     // Use the Data store API here: https://gridsome.org/docs/data-store-api
   });
   api.createPages(async ({ createPage, graphql }) => {
+    createPage({
+      path: '/blog',
+      component: './src/layouts/Blog.vue'
+    });
+
     const { data } = await graphql(`
       {
         allRoguePage(sortBy: "menuOrder", order: ASC) {

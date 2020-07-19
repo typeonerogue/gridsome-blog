@@ -1,9 +1,9 @@
 <template>
-  <div class="footer">my footer</div>
+  <div class="footer"></div>
 </template>
 
 <script>
 export default {
-  name: 'footer-comp'
+  name: 'FooterComp'
 };
 </script>
