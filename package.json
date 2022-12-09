@@ -14,7 +14,7 @@
   "dependencies": {
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "gridsome": "^0.7.19",
     "lodash": "^4.17.19",
     "netlify-cms": "^2.10.54",
